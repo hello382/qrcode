@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN" id="bgimg" style="background-size: cover;">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>荣</title>
+		<meta name="description" content="荣">
+		<meta name="keywords" content="荣">
+		<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/buttons.css">
+		<div style="text-align:center;clear:both"></div>
+	</head>
+	<body>
+		<p style="color: white;font-size: 50px;">荣的网站</p>
+		<br>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=756579097&auto=1&height=430"></iframe>
+		<br>
+		<br>
+		<p style="color: white;font-size: 50px;">关注我</p>
+		<div class="showcase-examples l-over l-center">
+			<a href="https://space.bilibili.com/491808465" title="按钮" class="button button-rounded button-plain button-small-caps button-border" target="_blank">B站空间</a>
+			<a href="https://user.qzone.qq.com/3067004058/main?_t_=0.4750402745888018" title="按钮" class="button button-rounded button-plain button-small-caps button-border"target="_blank" >QQ空间</a>
+			<a href="https://music.163.com/#/user/home?id=3966275865" title="按钮" class="button button-rounded button-plain button-small-caps button-border" target="_blank" >网易云空间</a>
+		</div>
+		<div id="top">
+			<p  style="color: white;font-size: 50px;">音乐视频</p>
+			<br>
+			<iframe src="//player.bilibili.com/player.html?aid=85380141&bvid=BV1j7411r7Kg&cid=145949441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			<iframe src="//player.bilibili.com/player.html?aid=202042225&bvid=BV1bh411R7ob&cid=233911363&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			<iframe src="//player.bilibili.com/player.html?aid=66860721&bvid=BV1e4411k7XS&cid=115948418&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			<br class="top_hr_style01">
+		</div>
+		<footer id="top_footer">
+			<span id="top_copyright">
+				<hr class="top_hr_style02">
+				<a href="https://space.bilibili.com/491808465">荣</a> copyright © 2022 All Rights Reserved. <a href=""></a>
+			</span>
+		</footer>
+	</body>
+	<script>
+		function mouseOver(){
+			document.getElementById("mainimg").src="src/tx.png";//鼠标悬浮时的旋转图标
+		}
+		function mouseOut(){
+			document.getElementById('mainimg').src ="src/tx2.png"//默认的旋转图标
+		}
+	</script>
+	<script type="text/javascript">
+		function change(){
+			var bodyBgs = [];
+			bodyBgs[0] = "https://images1.pianshen.com/204/6f/6f26d254cd6e3cb96ccd2aa923b60884.JPEG";
+			bodyBgs[1] = "https://h2.ioliu.cn/bing/FanjingStairs_ZH-CN0360402048_1920x1080.jpg?imageslim";
+			bodyBgs[2] = "https://img.mm4000.com/file/4/b5/767ae27bf1_1044.jpg";
+			// bodyBgs[3] = "http://image.qianye88.com/pic/8381f00f785cc7e40fb26a76ea83e06d"; //不支持https
+			// bodyBgs[4] = "http://i3.img.969g.com/down/imgx2014/10/24/289_102441_c2f0c.jpg"; //报错403,可能该网站服务器配置了防盗链
+			// bodyBgs[5] = "http://www.pp3.cn/uploads/pic1/0522/z5qd3ajpo4x.jpg";  //不支持https+1 ,无法正常工作(http可访问https资源,但反之不行)
+                                                                                    //建议直接下载需要的图片到github,然后在此引入
+                                                                                    //比如 bodyBgs[4] = "src/backgroundimages/4.jpg";
+			bodyBgs[3] = "https://5b0988e595225.cdn.sohucs.com/images/20180914/33f0026c84354cceafc7d7d20bf72ac4.jpeg";
+			var randomBgIndex = Math.round( Math.random() * 3 );
+			var img1= document.getElementById('bgimg');
+			img1.style.backgroundImage='url(' + bodyBgs[randomBgIndex] + ')';
+			window.setTimeout(function(){change()},10000);
+		}
+		change();
+	</script>
+	<script type="text/javascript" src="src/snow.min.js"></script>        
+	<script type="text/javascript">
+		createSnow('src/', 60);
+	</script>
+</html>
+		
